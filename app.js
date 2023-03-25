@@ -36,5 +36,10 @@ app.get("/works", (request, response) => {
     response.sendFile(__dirname + '/views/index.html')
 })
 
+app.get('/', (request, response, next) => {
+  console.log(request);
+  response.sendFile(__dirname + '/views/index.html')
+})
+
 // Server Started
 app.listen(5500, () => console.log('My first app listening on port 3000!'));
