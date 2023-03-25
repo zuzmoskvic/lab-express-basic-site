@@ -42,4 +42,4 @@ app.get('/', (request, response, next) => {
 })
 
 // Server Started
-app.listen(5500, () => console.log('My first app listening on port 3000!'));
+app.listen(3000, () => console.log('My first app listening on port 3000!'));
