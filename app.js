@@ -6,6 +6,7 @@ const app = express();
 
 // Make everything inside of public/ available
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/images'));
 app.use(express.static(__dirname + '/views'));
 
 //index Route:
