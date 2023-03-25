@@ -5,19 +5,30 @@ const express = require('express');
 const app = express();
 
 // Make everything inside of public/ available
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/views'));
 
 //index Route:
-app.get('/home', (request, response, next) => response.sendFile(__dirname + '/views/index.html'))
+app.get("/index", (request, response) => {
+    response.sendFile(__dirname + "/views/index.html");
+  });
 
 // about Route:
-app.get('/about', (request, response, next) => response.sendFile(__dirname + '/views/about.html'));
+app.get("/about", (request, response) => {
+    response.sendFile(__dirname + "/views/about.html");
+  });
 
 // gallery Route:
-app.get('/gallery', (request, response, next) => response.sendFile(__dirname + '/views/gallery.html'));
+app.get("/gallery", (request, response) => {
+    response.sendFile(__dirname + "/views/gallery.html");
+  });
+
 
 // works Route:
-app.get('/works', (request, response, next) => response.sendFile(__dirname + '/views/works.html'));
+app.get("/works", (request, response) => {
+    response.sendFile(__dirname + "/views/works.html");
+  });
+
 
 // Server Started
 app.listen(3000, () => console.log('My first app listening on port 3000!'));
