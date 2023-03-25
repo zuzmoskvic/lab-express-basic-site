@@ -1,0 +1,26 @@
+.red{
+    background-color:red;
+ }
+ 
+ .img-small{
+     max-width:100px;
+     max-height:100px;
+ }
+ 
+ .img-medium{
+   height:70%;
+ }
+ 
+ .nav-item a:hover{
+   background-color:red;
+   transform: scale(1.2);
+   transition-duration: 450ms;
+   transition-property: transform;
+   transition-timing-function: ease-in-out;
+   color:white !important;
+ }
+ 
+ .header-wrapper{
+   box-shadow: 0px 2px 5px -3px rgba(0,0,0,0.46);
+ }
+ 
